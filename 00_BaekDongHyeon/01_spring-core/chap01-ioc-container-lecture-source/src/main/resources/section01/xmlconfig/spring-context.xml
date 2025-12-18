@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+													 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="member" class="com.ohgiraffers.common.MemberDTO">
+        <!-- int 타입의 첫 번째 파라미터에 1 값을 전달 -->
+        <constructor-arg index="0" value="1"/>
+        <!-- String 타입의 id 파라미터에 "user01" 값을 전달 -->
+        <constructor-arg name="id" value="user01"/>
+        <!-- String 타입의 세 번째 파라미터에 "pass01" 값을 전달 -->
+        <constructor-arg index="2"><value>pass01</value></constructor-arg>
+        <!-- String 타입의 name 파라미터에 "홍길동" 값을 전달 -->
+        <constructor-arg name="name"><value>홍길동</value></constructor-arg>
+    </bean>
+
+</beans>
