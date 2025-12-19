@@ -1,5 +1,6 @@
-package com.my.common;
+package com.my.section01.xmlconfig;
 
+import com.my.common.MemberDTO;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
