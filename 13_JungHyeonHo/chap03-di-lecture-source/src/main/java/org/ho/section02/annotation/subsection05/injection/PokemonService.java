@@ -1,16 +1,17 @@
-package org.ho.section02.annotation.subsection04.resource;
+package org.ho.section02.annotation.subsection05.injection;
 
 import jakarta.annotation.Resource;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import org.ho.section02.annotation.common.Pokemon;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service("pokemonServiceResource")
+@Service("pokemonServiceInject")
 public class PokemonService {
 
-  /* pikachu 이름의 빈 지정 => JAVA의 어노테이션임, 스프링 아님*/
-  @Resource(name = "pikachu")
+  /* 1. 필드 주입 */
+  @Inject
+  @Named("squirtle")
   private Pokemon pokemon;
 
   public void pokemonAttack() {
