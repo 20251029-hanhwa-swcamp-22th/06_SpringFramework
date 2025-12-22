@@ -1,0 +1,26 @@
+package com.ohgiraffers.section01.autowired.subsection01.field;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Application {
+  public static void main(String[] args) {
+
+    /* 지정된 패키지를 컴포넌트 스캔하여
+    * @Component 스테레오 타입이 붙은 클래스를 Bean으로 등록
+    * */
+    ApplicationContext context
+        = new AnnotationConfigApplicationContext("com.ohgiraffers.section01");
+
+    BookService bookService = context.getBean("bookServiceField", BookService.class);
+
+    /* 전체 도서 목록 조회 후 출력 확인 */
+    bookService.selectAllBooks().forEach(System.out::println);
+
+    /* 도서번호로 검색 후 출력 확인*/
+    System.out.println(bookService.searchBookBySequence(1));
+    System.out.println(bookService.searchBookBySequence(2));
+
+
+  }
+}
