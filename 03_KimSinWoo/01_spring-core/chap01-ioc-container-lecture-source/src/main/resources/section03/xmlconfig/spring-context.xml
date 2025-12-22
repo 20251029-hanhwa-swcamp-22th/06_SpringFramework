@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        Component Scan을 위한 XML 설정 파일
+        - context 네임스페이스를 추가하여 component-scan 기능 사용
+    -->
+
+    <!--
+        <context:component-scan> 태그
+        - 지정된 패키지를 스캔하여 @Component, @Service, @Repository, @Controller 등이
+          붙은 클래스를 자동으로 Spring 빈으로 등록
+        - base-package: 스캔을 시작할 최상위 패키지 지정
+        - 지정된 패키지와 그 하위 패키지를 모두 스캔
+    -->
+    <context:component-scan base-package="com.ohgiraffers"/>
+</beans>
