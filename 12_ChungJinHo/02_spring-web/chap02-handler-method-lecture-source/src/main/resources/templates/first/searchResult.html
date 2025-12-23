@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>searchResult</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>검색 결과</h1>
+
+    <div class="result-box">
+      <h3 style="border: none; margin-top: 0; margin-bottom: 1rem;">메뉴 상세 정보</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li
+          style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <span style="color: var(--text-muted);">이름</span>
+          <span th:text="${ menu.name }" style="font-weight: bold;"></span>
+        </li>
+        <li
+          style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <span style="color: var(--text-muted);">가격</span>
+          <span th:text="${ menu.price }" style="font-weight: bold;"></span>
+        </li>
+        <li
+          style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <span style="color: var(--text-muted);">카테고리</span>
+          <span th:text="${ menu.categoryCode }" style="font-weight: bold;"></span>
+        </li>
+        <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: none;">
+          <span style="color: var(--text-muted);">판매상태</span>
+          <span th:text="${ menu.orderableStatus }" style="font-weight: bold;"></span>
+        </li>
+      </ul>
+    </div>
+
+    <button onclick="location.href='/'" style="margin-top: 1.5rem;">메인으로</button>
+  </div>
+</body>
+
+</html>

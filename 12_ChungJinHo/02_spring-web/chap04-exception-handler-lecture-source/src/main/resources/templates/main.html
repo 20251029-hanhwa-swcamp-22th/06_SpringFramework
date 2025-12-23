@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>예외 처리 데모</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>예외 처리 시스템</h1>
+            <p style="color: #94a3b8; margin-bottom: 3rem;">스프링 MVC의 다양한 예외 처리 방식을 테스트해보세요.</p>
+
+            <div class="btn-group">
+                <div>
+                    <h2>컨트롤러 레벨 (@ExceptionHandler)</h2>
+                    <div class="btn-row">
+                        <button onclick="location.href='controller-null'">Null값 에러 (NPE)</button>
+                        <button onclick="location.href='controller-user'">사용자 정의 에러</button>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>글로벌 레벨 (@ControllerAdvice)</h2>
+                    <div class="btn-row">
+                        <button onclick="location.href='other-controller-null'">전역 Null 에러</button>
+                        <button onclick="location.href='other-controller-user'">전역 사용자 정의 에러</button>
+                        <button onclick="location.href='other-controller-array'">배열 범위 초과 에러</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

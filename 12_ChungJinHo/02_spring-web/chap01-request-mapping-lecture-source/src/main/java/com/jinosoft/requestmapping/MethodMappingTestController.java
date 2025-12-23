@@ -2,8 +2,7 @@ package com.jinosoft.requestmapping;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /* Dispatcher Servlet은 웹 요청을 받는 즉시
 *  @Controller가 달린 컨트롤러 클래스에 처리를 위임한다.
@@ -43,4 +42,31 @@ public class MethodMappingTestController {
 
     return "mappingResult";
   }
+
+  @RequestMapping(value="/menu/modify", method = RequestMethod.GET)
+  public String getMenuModify(Model model) {
+    // Model 객체 : 화면에 데이터를 전달하는 용도의 객체
+    model.addAttribute("message","GET 방식 메뉴 수정");
+    return "mappingResult";
+  }
+
+  @RequestMapping(value="/menu/modify", method = RequestMethod.POST)
+  public String postMenuModify(Model model) {
+    model.addAttribute("message","POST 방식 메뉴 수정");
+    return "mappingResult";
+  }
+
+  @GetMapping(value="/menu/delete")
+  public String getMenuDelete(Model model) {
+    // Model 객체 : 화면에 데이터를 전달하는 용도의 객체
+    model.addAttribute("message","GET 방식 메뉴 삭제");
+    return "mappingResult";
+  }
+
+  @PostMapping(value="/menu/delete")
+  public String postMenuDelete(Model model) {
+    model.addAttribute("message","POST 방식 메뉴 삭제");
+    return "mappingResult";
+  }
+
 }
