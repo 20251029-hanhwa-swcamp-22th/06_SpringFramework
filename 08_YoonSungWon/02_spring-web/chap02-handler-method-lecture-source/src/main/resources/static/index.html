@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>index</title>
+</head>
+<body>
+        <h2>핸들러 메소드의 파라미터 전달 받기</h2>
+        <h3>1. WebRequest로 요청 파라미터 전달 받기</h3>
+        <button onclick="location.href='/first/regist'">WebRequest</button>
+        
+        <h3>2. @RequestParam으로 요청 파라미터 전달 받기</h3>
+        <button onclick="location.href='/first/modify'">@RequestParam</button>
+        
+        <h3>3. @ModelAttribute로 요청 파라미터 전달 받기</h3>
+        <button onclick="location.href='/first/search'">@ModelAttribute</button>
+        
+        <h3>4. session 이용하기</h3>
+        <button onclick="location.href='/first/login'">Session 이용하기</button>
+        
+        <h3>5. @RequestBody 이용하기</h3>
+        <button onclick="location.href='/first/body'">@RequestBody 이용하기</button>
+</body>
+</html>

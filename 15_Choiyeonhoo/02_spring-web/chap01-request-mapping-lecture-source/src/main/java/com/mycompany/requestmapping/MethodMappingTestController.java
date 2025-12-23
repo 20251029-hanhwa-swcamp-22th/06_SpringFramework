@@ -2,9 +2,11 @@ package com.mycompany.requestmapping;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /* Dispatcher Servlet은 웹 요청을 받는 즉시
 *  @Controller가 달린 컨트롤러 클래스에 처리를 위임한다.
@@ -52,5 +54,38 @@ public class MethodMappingTestController {
     model.addAttribute("message","Post 방식 메뉴 추가 핸들러 메서드 호출");
     return "mappingResult";
   }
+
+  @RequestMapping(value="/menu/modify", method = RequestMethod.GET)
+  public String getMenuModify(Model model){
+//  public ModelAndView getMenuModify(Model model){ // 예전엔 ModelAndView 객체를 많이 썼는데 RestAPI 이후 잘 안씀
+    // Model 객체 : 화면에 데이터를 전달하는 용도의 객체 (
+
+    model.addAttribute("message", "get 방식 메뉴 수정");
+
+    // forward 구문
+    // - resources/templates/ 폴더 기준으로 파일 경로 작성
+    // - 마지막 확장자 .html 생략
+    return "mappingResult";
+  }
+
+  @RequestMapping(value="/menu/modify", method = RequestMethod.POST)
+  public String postMenuModify(Model model){
+
+    model.addAttribute("message", "Post 방식 메뉴 수정");
+    return "mappingResult";
+  }
+
+  @GetMapping("/menu/delete")
+  public String getMenuDelete(Model model){
+    model.addAttribute("message", "Get 방식 메뉴 삭제");
+    return "mappingResult";
+  }
+
+  @PostMapping("/menu/delete")
+  public String postMenuDelete(Model model){
+    model.addAttribute("message", "Post 방식 메뉴 삭제");
+    return "mappingResult";
+  }
+
 
 }

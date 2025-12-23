@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <h1>처리 결과</h1>
+        <div class="result-box">
+            <h3 th:text="${message}" style="border: none; margin:0; color: var(--primary-color);"></h3>
+        </div>
+        <button onclick="location.href='/'" style="margin-top: 2rem;">메인으로</button>
+    </div>
+</body>
+
+</html>
