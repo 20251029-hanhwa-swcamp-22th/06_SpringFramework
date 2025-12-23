@@ -11,9 +11,13 @@ repositories {
 
 dependencies {
 
-    implementation 'org.springframework:spring-context:5.3.27'
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+    runtimeOnly 'org.aspectj:aspectjrt:1.9.24'
 
-// https://mvnrepository.com/artifact/org.springframework/spring-context
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    implementation 'org.aspectj:aspectjweaver:1.9.24'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
     implementation 'org.springframework:spring-context:6.2.7'
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
