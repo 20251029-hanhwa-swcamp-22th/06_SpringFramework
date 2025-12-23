@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>로그인 결과</title>
+</head>
+<body>
+        <!-- ${id} : request scope 에서 id 속성을 얻어오기 -->
+        <h3 th:text="${id}"></h3>
+        <hr>
+        <!-- ${session.pwd} : request scope 에서 pwd 속성을 얻어오기 -->
+        <h3 th:text="${session.pwd}"></h3>
+        
+        <div>
+                <button onclick="location.href='logout'">로그아웃</button>
+        </div>
+</body>
+</html>
