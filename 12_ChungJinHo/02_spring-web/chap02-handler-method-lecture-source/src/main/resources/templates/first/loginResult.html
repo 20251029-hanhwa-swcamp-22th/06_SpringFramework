@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loginResult</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container" style="text-align: center;">
+    <h1>환영합니다</h1>
+    <div class="result-box">
+      <h3 th:text="|${ session.id }님 환영합니다.|" style="border: none; margin:0; color: var(--primary-color);"></h3>
+    </div>
+
+    <div style="display: flex; gap: 0.5rem; margin-top: 1.5rem;">
+      <button onclick="location.href='logout1'"
+        style="background: var(--surface-color); border: 1px solid var(--primary-color); color: var(--primary-color);">로그아웃
+        (Session)</button>
+      <button onclick="location.href='logout2'"
+        style="background: var(--surface-color); border: 1px solid var(--primary-color); color: var(--primary-color);">로그아웃
+        (Attr)</button>
+    </div>
+
+    <button onclick="location.href='/'" style="margin-top: 1rem;">메인으로</button>
+  </div>
+</body>
+
+</html>

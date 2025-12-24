@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>body</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>@RequestBody 바인딩</h1>
+        <h3>커맨드 객체를 이용한 파라미터 바인딩</h3>
+
+        <form action="body" method="post">
+            <label>
+                메뉴 이름
+                <input type="text" name="name" placeholder="메뉴 이름">
+            </label>
+            <label>
+                메뉴 가격
+                <input type="number" name="price" placeholder="가격">
+            </label>
+            <label>
+                카테고리
+                <select name="categoryCode">
+                    <option value="1">식사</option>
+                    <option value="2">음료</option>
+                    <option value="3">디저트</option>
+                </select>
+            </label>
+            <label>
+                판매 상태
+                <input type="text" name="orderableStatus" placeholder="Y / N">
+            </label>
+            <input type="submit" value="검색하기">
+        </form>
+
+        <a href="/" style="display:block; text-align:center; margin-top:1rem;">메인으로 돌아가기</a>
+    </div>
+</body>
+
+</html>

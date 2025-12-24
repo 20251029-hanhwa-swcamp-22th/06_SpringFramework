@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>세션(Session) 이해하기</h1>
+
+    <h3>HttpSession 방식</h3>
+    <form action="login1" method="post">
+      <label>
+        ID
+        <input type="text" name="id" placeholder="Enter ID">
+      </label>
+      <label>
+        PWD
+        <input type="password" name="pwd" placeholder="Enter Password">
+      </label>
+      <input type="submit" value="로그인">
+    </form>
+
+    <div style="margin: 2rem 0; border-top: 1px solid var(--border-color);"></div>
+
+    <h3>@SessionAttributes 방식</h3>
+    <form action="login2" method="post">
+      <label>
+        ID
+        <input type="text" name="id" placeholder="Enter ID">
+      </label>
+      <label>
+        PWD
+        <input type="password" name="pwd" placeholder="Enter Password">
+      </label>
+      <input type="submit" value="로그인">
+    </form>
+
+    <a href="/" style="display:block; text-align:center; margin-top:1rem;">메인으로 돌아가기</a>
+  </div>
+</body>
+
+</html>
