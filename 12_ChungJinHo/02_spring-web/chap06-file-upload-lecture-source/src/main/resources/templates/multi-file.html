@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>멀티 파일 업로드</title>
+</head>
+
+<body>
+    <h1>멀티 파일 업로드 테스트</h1>
+
+    <!-- 
+        다중 파일 업로드를 위해 input 태그에 multiple 속성을 추가합니다.
+    -->
+    <form action="multi-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="multiFiles" multiple><br>
+        파일 설명 : <input type="text" name="multiFileDescription"><br>
+        <input type="submit" value="업로드">
+    </form>
+
+    <br>
+    <a href="main">메인으로 돌아가기</a>
+</body>
+
+</html>
