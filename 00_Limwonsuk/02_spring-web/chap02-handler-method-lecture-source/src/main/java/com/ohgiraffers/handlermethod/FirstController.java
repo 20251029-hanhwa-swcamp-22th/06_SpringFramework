@@ -48,6 +48,9 @@ public class FirstController {
         String message
                 = String.format("%s을/를 신규 메뉴목록의 %d 번 카테고리에 %d로 등록"
                 , name, categoryCode, price);
+        
+        // %s = 지정한 String 형식
+        // %d = 지정한 int 형식
 
         model.addAttribute("message", message);
 
@@ -87,6 +90,7 @@ public class FirstController {
 
     @GetMapping("search")
     public void search() {
+        System.out.println("search로 이동했음.");
     }
 
     /* 3 model attreibute
