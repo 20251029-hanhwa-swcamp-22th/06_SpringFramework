@@ -1,4 +1,4 @@
-package com.kang.section02.annotation.subsection04.resource;
+package com.kang.section02.annotation.subsection05.inject;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -8,7 +8,7 @@ public class Application {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kang.section02");
 
-        PokemonService pokemonService = context.getBean("pokemonServiceResource", PokemonService.class);
+        PokemonService pokemonService = context.getBean("pokemonServiceInject", PokemonService.class);
         pokemonService.pokemonAttack();
 
     }

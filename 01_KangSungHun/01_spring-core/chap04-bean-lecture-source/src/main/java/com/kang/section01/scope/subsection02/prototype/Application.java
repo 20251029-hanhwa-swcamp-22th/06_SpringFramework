@@ -1,4 +1,4 @@
-package com.kang.section01.scope.subsection01.singleton;
+package com.kang.section01.scope.subsection02.prototype;
 
 import com.kang.common.Product;
 import com.kang.common.ShoppingCart;
@@ -26,8 +26,7 @@ public class Application {
       System.out.println("-------------------------------------------------------------------------------------------");
 
     /* 다음 손님이 와서 쇼핑 카트를 사용한다.
-    * -> 쇼핑 카트가 Scope = "singleton" 이기 때문에 이전 손님과 카트가 공유됨!@
-    *
+    * -> 쇼핑 카트가 Scope = "prototype" 이기 때문에 손님 별로 카드가 따로따로 생성됨
     * */
     ShoppingCart shoppingCart2 = applicationContext.getBean("cart", ShoppingCart.class);
     shoppingCart2.addItem(water);

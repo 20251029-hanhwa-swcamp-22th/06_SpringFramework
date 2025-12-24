@@ -1,8 +1,9 @@
-package com.kang.section03.proxy.subsection01.dynamic;
+package com.kang.section03.proxy.subsection03.subsection02.cglib;
 
 import com.kang.section03.proxy.common.Student;
+import org.springframework.cglib.proxy.InvocationHandler;
 
-import java.lang.reflect.InvocationHandler;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 

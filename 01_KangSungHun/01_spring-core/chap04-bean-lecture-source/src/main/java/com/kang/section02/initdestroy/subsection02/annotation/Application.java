@@ -1,4 +1,4 @@
-package com.kang.section02.initdestroy.subsection01.java;
+package com.kang.section02.initdestroy.subsection02.annotation;
 
 import com.kang.common.Product;
 import com.kang.common.ShoppingCart;
@@ -10,7 +10,7 @@ public class  Application {
 
     /* 빈 설정 파일을 기반으로 IoC 컨테이너 생성 */
     ApplicationContext applicationContext
-        = new AnnotationConfigApplicationContext(ContextConfiguration.class);
+        = new AnnotationConfigApplicationContext("com.kang.section02.initdestroy.subsection02.annotation");
 
     /* 슈퍼에 상품이 진열 되어 있다. */
     Product carpBread = applicationContext.getBean("carpBread", Product.class);

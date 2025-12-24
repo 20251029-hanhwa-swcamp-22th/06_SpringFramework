@@ -1,28 +1,17 @@
-package com.kang.section02.annotation.subsection02.qualifier;
+package com.kang.section02.annotation.subsection04.resource;
 
 import com.kang.section02.annotation.common.Pokemon;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
-@Service("pokemonServiceQualifier")
-public class PokemonService {
+@Service("pokemonServiceResource")
+    public class PokemonService {
 
-    /* @Qualifier("Bean Name")
-    * - 이름이 일치하는 Bean을 의존성 주입(
-    * */
-//
-//    @Autowired
-//    @Qualifier("pikachu")
-	private Pokemon pokemon;
+        /* pikachu 이름의 빈 지정 */
+        @Resource(name = "pikachu")
+        private Pokemon pokemon;
 
-  /* @Qualifier 어노테이션을 사용하여 squirtle 빈 객체를 지정한다. */
-	@Autowired
-    public PokemonService(@Qualifier("pikachu") Pokemon pokemon) {
-		this.pokemon = pokemon;
-	}
-	
-	public void pokemonAttack() {
-		pokemon.attack();
-	}
-}
+        public void pokemonAttack() {
+            pokemon.attack();
+        }
+    }

@@ -1,4 +1,4 @@
-package com.kang.section02.initdestroy.subsection01.java;
+package com.kang.section02.initdestroy.subsection02.annotation;
 
 import com.kang.common.Beverage;
 import com.kang.common.Bread;
@@ -35,12 +35,7 @@ public class ContextConfiguration {
     System.out.println("물 생성 시점");
     return new Beverage("지리산암반수", 3000, 500);
   }
-	
-	/* init-method로 openShop 메소드를 설정하고 destory-method로 closeShope 메소드를 설정한다. */
-	@Bean(initMethod = "openShop", destroyMethod="closeShop")
-	public Owner owner() {
-		
-		return new Owner();
-	}
+
+
 
 }
