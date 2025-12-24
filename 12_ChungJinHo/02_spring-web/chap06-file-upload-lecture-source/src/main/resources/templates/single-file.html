@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>싱글 파일 업로드</title>
+</head>
+
+<body>
+    <h1>싱글 파일 업로드 테스트</h1>
+
+    <!-- 
+        파일 업로드를 위해서는 method="post", enctype="multipart/form-data" 속성이 필수입니다.
+    -->
+    <form action="single-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="singleFile"><br>
+        파일 설명 : <input type="text" name="singleFileDescription"><br>
+        <input type="submit" value="업로드">
+    </form>
+
+    <br>
+    <a href="main">메인으로 돌아가기</a>
+</body>
+
+</html>
