@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>@ModelAttribute 커맨드 객체</h1>
+
+    <h3>메뉴 검색</h3>
+    <form action="search" method="post">
+      <label>
+        검색할 메뉴 이름
+        <input type="text" name="name" placeholder="메뉴 이름">
+      </label>
+      <label>
+        검색할 메뉴 가격
+        <input type="number" name="price" placeholder="가격">
+      </label>
+      <label>
+        검색할 메뉴의 카테고리
+        <select name="categoryCode">
+          <option value="1">식사</option>
+          <option value="2">음료</option>
+          <option value="3">디저트</option>
+        </select>
+      </label>
+      <label>
+        검색할 판매 상태
+        <input type="text" name="orderableStatus" placeholder="예: Y">
+      </label>
+      <input type="submit" value="검색하기">
+    </form>
+
+    <a href="/" style="display:block; text-align:center; margin-top:1rem;">메인으로 돌아가기</a>
+  </div>
+</body>
+
+</html>

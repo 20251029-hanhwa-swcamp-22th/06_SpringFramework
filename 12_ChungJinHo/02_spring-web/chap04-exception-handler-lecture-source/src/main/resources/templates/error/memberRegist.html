@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입 오류</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card error-container">
+            <h1>면목 없습니다...</h1>
+            <img src="/images/dogeza.png" alt="Apologetic Dogeza Character" class="dogeza-img">
+            <div class="error-message">
+                <h2>회원 가입 중 문제가 발생했습니다.</h2>
+                <p th:text="${ exception.message }"
+                    style="color: var(--secondary-color); font-weight: bold; font-size: 1.5rem;"></p>
+                <p>입력하신 정보를 다시 한 번 확인해 주시면 감사하겠습니다.</p>
+            </div>
+            <a href="/" class="home-link">메인으로 돌아가기</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>main</title>
+</head>
+<body>
+<h1>view resolver 테스트</h1>
+
+<h3>문자열로 뷰 이름 반환(forward)</h3>
+<button onclick="location.href='string'">문자열로 뷰 이름 반환</button>
+
+<h3>문자열로 redirect</h3>
+<button onclick="location.href='string-redirect'">문자열로 redirect</button>
+
+<h3>문자열로 redirect & flash attribute</h3>
+<button onclick="location.href='string-redirect-attr'">문자열로 redirect & flash attribute</button>
+
+<script>
+    const flashMessage = `[[${flashMessage}]]`;
+    if(flashMessage) alert(flashMessage);
+</script>
+
+<h3>ModelAndView 반환(forward)</h3>
+<button onclick="location.href='modelandview'">ModelAndView 반환</button>
+
+<h3>ModelAndView로 redirect</h3>
+<button onclick="location.href='modelandview-redirect'">ModelAndView로 redirect</button>
+</body>
+</html>
