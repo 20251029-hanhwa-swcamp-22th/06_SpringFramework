@@ -1,0 +1,10 @@
+spring:
+  application:
+  name: chap06-file-upload-lecture-source
+
+  servlet:
+    multipart:
+      location: C:/lecture/uploadFiles # ?? ?? ??
+      max-file-size: 10MB # ?? ??? ?? ??
+      max-request-size: 10MB # ?? ?? ?? ??
+
