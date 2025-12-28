@@ -8,8 +8,13 @@
     <h1>File Upload Test</h1>
     <h2>Single File Upload</h2>
     <!--
-      form 태그의 기본 전송 content type은 application/x-www-form-urlencoded 로 설정 되어 있으나
-      file을 전송할 경우에는 encoding type을 multipart/form-data 로 변경해야 한다.
+      - 파일 업로드 요청은 무조건 POST(HTTP Body에 데이터를 담아서 전달)
+      - form 태그의 기본 전송 content type은 application/x-www-form-urlencoded 로 설정 되어 있으나
+        -> form에 담긴 input이 제출될 때 형식을 (URL 인코딩된)문자열로 하겠다
+
+      - file을 전송할 경우에는 encoding type을 multipart/form-data 로 변경해야 한다.
+        -> form에 담긴 input이 제출될 때 데이터 형식을 각각 알맞게 구분하겠다
+           (인코딩 X)
     -->
     <form action="single-file" method="post" enctype="multipart/form-data">
         파일 : <input type="file" name="singleFile"/>
@@ -23,5 +28,14 @@
         파일 설명 : <input type="text" name="multiFileDescription"/>
         <input type="submit"/>
     </form>
+
+    <h2>Multi File Upload - DB 저장 로직</h2>
+    <form action="multi-file-db" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="multiFile" multiple/>
+        파일 설명 : <input type="text" name="multiFileDescription"/>
+        <input type="submit"/>
+    </form>
+
+
 </body>
 </html>
