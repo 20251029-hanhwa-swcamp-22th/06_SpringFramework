@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>etc</title>
+</head>
+<body>
+    <h1>기타</h1>
+
+    <h2>with</h2>
+    <th:block th:with="start = ${ selectCriteria.startPage }, last = ${ selectCriteria.endPage }">
+        <th:block th:each="p : ${ #numbers.sequence(start, last) }">
+            <th:block th:if="${ selectCriteria.pageNo eq p }">
+                <button th:text="${p}" disabled></button>
+            </th:block>
+            <th:block th:if="${ selectCriteria.pageNo ne p }">
+                <button th:text="${p}"></button>
+            </th:block>
+        </th:block>
+    </th:block>
+
+    <h2>Spring EL</h2>
+
+    <p>Object</p>
+    <ul>
+        <li th:text="${ member.name }"></li>
+        <li th:text="${ member['age'] }"></li>
+        <li th:text="${ member.getGender() }"></li>
+    </ul>
+
+    <p>List</p>
+    <ul>
+        <li th:text="${ memberList[1].name }"></li>
+        <li th:text="${ memberList[1]['age'] }"></li>
+        <li th:text="${ memberList[1].getGender() }"></li>
+        <li th:text="${ memberList.get(2).name }"></li>
+        <li th:text="${ memberList.get(2)['age'] }"></li>
+        <li th:text="${ memberList.get(2).getGender() }"></li>
+    </ul>
+
+    <p>Map</p>
+    <ul>
+        <li th:text="${ memberMap['m04'].name }"></li>
+        <li th:text="${ memberMap['m04']['age'] }"></li>
+        <li th:text="${ memberMap['m04'].getGender() }"></li>
+        <li th:text="${ memberMap.get('m04').name }"></li>
+        <li th:text="${ memberMap.get('m04')['age'] }"></li>
+        <li th:text="${ memberMap.get('m04').getGender() }"></li>
+    </ul>
+
+</body>
+</html>
